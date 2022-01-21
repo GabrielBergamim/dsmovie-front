@@ -9,7 +9,7 @@ export function FieldError({ field, control }: FieldErrorProps) {
   return (
     <>
       {control.touched[field] && control.errors[field] ? (
-        <div>{control.errors[field]}</div>
+        <div className="message-error">{control.errors[field]}</div>
       ) : null}
     </>
   );

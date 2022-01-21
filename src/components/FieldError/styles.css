@@ -1,0 +1,5 @@
+.message-error {
+  color: var(--color-error); 
+  font-size: 12px;
+  padding-top: 3px;
+}

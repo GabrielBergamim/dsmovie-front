@@ -2,6 +2,7 @@
 
 :root {
   --color-primary: #4D41C0;
+  --color-error: #FF3300;
 }
 
 * {

@@ -8,6 +8,7 @@ import { BASE_URL } from 'utils/requests';
 import { MovieDTO, ScoreEntradaDTO } from 'types/movie';
 
 import './styles.css';
+import { FieldError } from 'components/FieldError';
 
 interface Props {
   movieId: string
@@ -60,9 +61,7 @@ export function FormCard({ movieId }: Props) {
               type="email"
               onChange={formik.handleChange}
               onBlur={formik.handleBlur} />
-            {formik.touched.email && formik.errors.email ? (
-              <div style={{ color: '#FF3300', fontSize: 12, paddingTop: 3 }}>{formik.errors.email}</div>
-            ) : null}
+            <FieldError control={formik} field="email"/>
           </div>
           <div className="form-group dsmovie-form-group">
             <label htmlFor="score">Informe sua avaliação</label>
